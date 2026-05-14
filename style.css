@@ -109,12 +109,15 @@ a:hover {
     background: none;
     border: 1px solid var(--text-primary);
     color: var(--text-primary);
-    padding: 0.4rem 1rem;
+    width: 36px;
+    height: 36px;
     margin-left: 1.5rem;
-    border-radius: 20px;
+    border-radius: 50%; /* Makes it a perfect circle */
     cursor: pointer;
-    font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: all 0.3s ease;
 }
 
@@ -196,7 +199,7 @@ a:hover {
     border-color: var(--primary-color);
 }
 
-/* NEW: Project Image Styles */
+/* Project Image Styles */
 .project-img {
     width: 100%;
     height: 180px;
@@ -208,7 +211,7 @@ a:hover {
 
 .tags-container {
     margin-bottom: 1.5rem;
-    margin-top: auto; /* Pushes tags to the bottom if descriptions vary in length */
+    margin-top: auto;
 }
 
 .tag {

@@ -10,29 +10,29 @@ const portfolioData = {
             title: "QRing.io",
             description: "A website built for MultAI's post-quantum crypto called QRing.",
             url: "https://qring.io",
-            tags: ["Cryptocurrency", "Web Design"],
-            image: "assets/qring.png" // Add your image to the assets folder!
+            tags: ["Security", "Web Design"],
+            image: "assets/qring.jpg" 
         },
         {
             title: "FemConnect.live",
             description: "A dating site designed for femboys and queer guys seeking meaningful connections over random hookups.",
             url: "https://femconnect.live",
             tags: ["Full Stack", "Community"],
-            image: "assets/femconnect.png"
+            image: "assets/femconnect.jpg"
         },
         {
             title: "Fake Game Foundry",
             description: "An interactive web application that teaches the fundamentals of game development through an intuitive UI.",
             url: "https://fakegamefoundry.fly.dev",
             tags: ["Education", "Interactive UI"],
-            image: "assets/foundry.png"
+            image: "assets/foundry.jpg"
         },
         {
             title: "KLB Industrial Web",
             description: "A professional corporate website developed for KLB Industrial Corp.",
             url: "https://klb-industrial-web.vercel.app",
             tags: ["React.js", "Corporate"],
-            image: "assets/klb.png"
+            image: "assets/klb.jpg"
         }
     ]
 };
@@ -40,7 +40,7 @@ const portfolioData = {
 // Function to render skills (Checks if the container exists on the current page)
 function renderSkills() {
     const skillsList = document.getElementById('skills-list');
-    if (!skillsList) return; // Exit if we aren't on a page with the skills list
+    if (!skillsList) return; 
 
     portfolioData.skills.forEach(skill => {
         const li = document.createElement('li');
@@ -53,7 +53,7 @@ function renderSkills() {
 // Function to render projects (Checks if the container exists on the current page)
 function renderProjects() {
     const projectsContainer = document.getElementById('projects-container');
-    if (!projectsContainer) return; // Exit if we aren't on the projects page
+    if (!projectsContainer) return; 
     
     portfolioData.projects.forEach(project => {
         const card = document.createElement('div');
@@ -88,7 +88,7 @@ const currentTheme = localStorage.getItem('theme');
 // 2. If the saved theme is 'light', apply it immediately on load
 if (currentTheme === 'light') {
     document.body.classList.add('light-mode');
-    themeToggleBtn.textContent = '🌙 Dark Mode';
+    themeToggleBtn.textContent = '🌙';
 }
 
 // 3. Listen for clicks on the toggle button
@@ -100,9 +100,9 @@ themeToggleBtn.addEventListener('click', () => {
     let theme = 'dark';
     if (document.body.classList.contains('light-mode')) {
         theme = 'light';
-        themeToggleBtn.textContent = '🌙 Dark Mode';
+        themeToggleBtn.textContent = '🌙';
     } else {
-        themeToggleBtn.textContent = '☀️ Light Mode';
+        themeToggleBtn.textContent = '☀️';
     }
     
     // Save the user's preference to localStorage
