@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
-    /* Your existing theme variables */
+    /* Theme variables */
     --bg-color: #121212;
     --surface-color: #1e1e1e;
     --primary-color: #bb86fc;
@@ -57,14 +57,9 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Base resets for the form */
 button, input, optgroup, select, textarea {
     font-family: inherit;
-    font-feature-settings: inherit;
-    font-variation-settings: inherit;
     font-size: 100%;
-    font-weight: inherit;
-    line-height: inherit;
     color: inherit;
     margin: 0;
     padding: 0;
@@ -191,13 +186,11 @@ a:hover {
     padding: 8rem 2rem;
 }
 
-#hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-}
-
-#hero strong {
-    color: var(--primary-color);
+.hero-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px; /* Adjust this to size the main logo perfectly */
+    margin-bottom: 1.5rem;
 }
 
 .slogan {
