@@ -186,15 +186,45 @@ a:hover {
     padding: 8rem 2rem;
 }
 
-.hero-logo {
-    width: 770px;
+/* Split Logo Container */
+.hero-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 770px;
     height: 330px;
-    max-width: 100%;
-    object-fit: contain; 
-    margin-bottom: 2rem; /* Increased margin since slogan is gone */
+    margin: 0 auto 2rem auto;
 }
 
-/* Slogan text class removed as text is now in logo image */
+.hero-icon {
+    height: 100%;
+    max-height: 250px;
+    width: auto;
+    object-fit: contain;
+}
+
+.hero-text {
+    height: 100%;
+    max-height: 120px; /* Usually the text logotype is wider than it is tall */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Make it responsive for mobile phones */
+@media (max-width: 768px) {
+    .hero-logo-container {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+    }
+    .hero-icon {
+        max-height: 150px;
+    }
+    .hero-text {
+        max-height: 70px;
+    }
+}
 
 .subtitle {
     font-size: 1.2rem;
