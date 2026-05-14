@@ -1,4 +1,4 @@
-// Data for your portfolio, now with image paths!
+// Data for your portfolio
 const portfolioData = {
     skills: [
         "JavaScript", "TypeScript", "HTML5", "CSS3", 
@@ -11,33 +11,33 @@ const portfolioData = {
             description: "A website built for MultAI's post-quantum crypto called QRing.",
             url: "https://qring.io",
             tags: ["Security", "Web Design"],
-            image: "assets/qring.png" 
+            image: "assets/qring.jpg" 
         },
         {
             title: "FemConnect.live",
             description: "A dating site designed for femboys and queer guys seeking meaningful connections over random hookups.",
             url: "https://femconnect.live",
             tags: ["Full Stack", "Community"],
-            image: "assets/femconnect.png"
+            image: "assets/femconnect.jpg"
         },
         {
             title: "Fake Game Foundry",
             description: "An interactive web application that teaches the fundamentals of game development through an intuitive UI.",
             url: "https://fakegamefoundry.fly.dev",
             tags: ["Education", "Interactive UI"],
-            image: "assets/foundry.png"
+            image: "assets/foundry.jpg"
         },
         {
             title: "KLB Industrial Web",
             description: "A professional corporate website developed for KLB Industrial Corp.",
             url: "https://klb-industrial-web.vercel.app",
             tags: ["React.js", "Corporate"],
-            image: "assets/klb.png"
+            image: "assets/klb.jpg"
         }
     ]
 };
 
-// Function to render skills (Checks if the container exists on the current page)
+// Function to render skills
 function renderSkills() {
     const skillsList = document.getElementById('skills-list');
     if (!skillsList) return; 
@@ -50,7 +50,7 @@ function renderSkills() {
     });
 }
 
-// Function to render projects (Checks if the container exists on the current page)
+// Function to render projects
 function renderProjects() {
     const projectsContainer = document.getElementById('projects-container');
     if (!projectsContainer) return; 

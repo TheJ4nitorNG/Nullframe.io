@@ -5,6 +5,10 @@
     --text-primary: #ffffff;
     --text-secondary: #b3b3b3;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Variables for form states */
+    --success-color: #4caf50;
+    --error-color: #cf6679;
 }
 
 /* --- LIGHT MODE VARIABLES --- */
@@ -14,6 +18,9 @@ body.light-mode {
     --primary-color: #6200ee;
     --text-primary: #121212;
     --text-secondary: #555555;
+    
+    --success-color: #388e3c;
+    --error-color: #b00020;
 }
 
 * {
@@ -36,7 +43,6 @@ body {
     padding: 4rem 2rem;
 }
 
-/* Pushes content down a bit if it's the main focus of a separate page */
 .page-content {
     min-height: 60vh;
 }
@@ -104,7 +110,7 @@ a:hover {
     color: var(--primary-color);
 }
 
-/* --- THEME BUTTON STYLES --- */
+/* Theme Button Styles */
 .theme-btn {
     background: none;
     border: 1px solid var(--text-primary);
@@ -112,7 +118,7 @@ a:hover {
     width: 36px;
     height: 36px;
     margin-left: 1.5rem;
-    border-radius: 50%; /* Makes it a perfect circle */
+    border-radius: 50%;
     cursor: pointer;
     font-size: 1.1rem;
     display: flex;
@@ -199,7 +205,6 @@ a:hover {
     border-color: var(--primary-color);
 }
 
-/* Project Image Styles */
 .project-img {
     width: 100%;
     height: 180px;
@@ -231,20 +236,108 @@ a:hover {
     margin-top: 1rem;
 }
 
-/* Footer */
-#contact {
+/* Shared Footer Styles */
+footer {
     background-color: var(--surface-color);
     text-align: center;
     border-top: 1px solid var(--text-secondary);
     transition: background-color 0.3s ease;
 }
 
-.contact-info {
-    margin: 2rem 0;
-    font-size: 1.2rem;
+.footer-content {
+    padding: 2rem;
 }
 
 .copyright {
     font-size: 0.9rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
+}
+
+/* Contact Page Specific */
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--text-secondary);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Formspree Validation Styles */
+.contact-form input[aria-invalid="true"],
+.contact-form textarea[aria-invalid="true"] {
+    border-color: var(--error-color);
+}
+
+.fs-error-text {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: -0.8rem;
+    display: block;
+}
+
+.form-success {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.form-error {
+    background-color: rgba(207, 102, 121, 0.1);
+    border: 1px solid var(--error-color);
+    color: var(--error-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Hide success/error messages by default */
+[data-fs-success], [data-fs-error] {
+    display: none;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: opacity 0.3s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
