@@ -11,28 +11,28 @@ const portfolioData = {
             description: "A website built for MultAI's post-quantum crypto called QRing.",
             url: "https://qring.io",
             tags: ["Security", "Web Design"],
-            image: "assets/qring.jpg" 
+            image: "assets/qring.png" 
         },
         {
             title: "FemConnect.live",
             description: "A dating site designed for femboys and queer guys seeking meaningful connections over random hookups.",
             url: "https://femconnect.live",
             tags: ["Full Stack", "Community"],
-            image: "assets/femconnect.jpg"
+            image: "assets/femconnect.png"
         },
         {
             title: "Fake Game Foundry",
             description: "An interactive web application that teaches the fundamentals of game development through an intuitive UI.",
             url: "https://fakegamefoundry.fly.dev",
             tags: ["Education", "Interactive UI"],
-            image: "assets/foundry.jpg"
+            image: "assets/foundry.png"
         },
         {
             title: "KLB Industrial Web",
             description: "A professional corporate website developed for KLB Industrial Corp.",
             url: "https://klb-industrial-web.vercel.app",
             tags: ["React.js", "Corporate"],
-            image: "assets/klb.jpg"
+            image: "assets/klb.png"
         }
     ]
 };
