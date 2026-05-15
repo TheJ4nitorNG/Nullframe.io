@@ -141,8 +141,9 @@ a:hover {
     height: 36px;
     width: 36px;
     border-radius: 6px;
-    transform: scale(2.5);
+    transform: scale(2.42);
     transform-origin: left center;
+    margin-right: 60px; /* Accounts for the visual overflow of the CSS transform scaling */
 }
 
 .nav-links {
