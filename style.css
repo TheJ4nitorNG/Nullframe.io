@@ -138,12 +138,10 @@ a:hover {
 }
 
 .brand-logo {
-    height: 36px;
-    width: 36px;
+    height: 70px;
+    width: 70px;
     border-radius: 6px;
-    transform: scale(2.42);
-    transform-origin: left center;
-    margin-right: 60px; /* Accounts for the visual overflow of the CSS transform scaling */
+    object-fit: contain;
 }
 
 .nav-links {
